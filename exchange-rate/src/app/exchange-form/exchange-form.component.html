@@ -1,0 +1,79 @@
+
+
+<div class="container mt-1">
+    <div class="row py-3 px-4">
+      <div class="col-md-12">
+        <h1 class="text-bold">Currency Exchange</h1>
+      </div>
+    
+    </div>
+    <div class="row py-2 px-4">
+      <div class="col-md-12 ">
+        <div class="card panel mb-5">
+          <div class="card-body form-card">
+            <div class="panel-group" role="tablist" aria-multiselectable="true">
+              <div class="panel-default">
+                <div class="panel-heading" role="tab" id="headingBasic">
+                  <div class="float-left form-icon text-center mr-3">
+                    <span class="flaticon-paper  primary-color"></span>
+                  </div>
+                  <h4 class="panel-title font-weight-bold secondary-color pt-2">Exchange Rate</h4>
+                  <p class="subtitle mt-0 mb-2  ">Please fill in the appropriate data</p>
+                </div>
+                <hr>
+                <div id="collapseBasic" class="panel-collapse show mt-2" role="tabpanel" aria-labelledby="headingBasic">
+                  <div class="panel-body">
+                    <div class="col-md-10 offset-md-1">
+                        <div>
+                            <p class="font-weight-bold">Current exchange rate is : {{exRate}}</p>
+                          </div>
+                      <div class="form-body">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <label for="rate">Exchange Rate</label>
+                                  <input type="number" name="rate" (keyup)="calBoth()" [(ngModel)]="exRate" class="form-control">
+                              </div>
+                            </div>
+                            <h5 class="text-bold mt-4">Conversion</h5>
+                          <div class="row">
+                              <div class="col-md-6">
+                                <label for="NGN">Naira</label>
+                                <div class="input-group">
+                                  <span class="input-group-text">NGN</span>
+                                  <input type="number" (keyup)="calDollar()" name="naira" [(ngModel)]="naira" class="form-control">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <label for="USD">US Dollars</label>
+                                 <div class="input-group">
+                                   <span class="input-group-text">USD</span>
+                                   <input type="number" (keyup)="calNaira()"  name="dollar" [(ngModel)]="dollar" class="form-control">
+                                 </div>
+                              </div>
+                             
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer text-muted">
+            <div class="p-3">
+              <div class="row">
+               
+                <div class="col-md-2 offset-md-10">
+                  <button class="btn  btn-block btn-primary hover-raise" type="button" (click)="print()">
+                    Print</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
