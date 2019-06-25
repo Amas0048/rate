@@ -21,7 +21,7 @@ export class ExchangeFormComponent implements OnInit {
   }
 
   calDollar(){
-    this.dollar = this.exRate / this.naira;
+    this.dollar = this.naira / this.exRate ;
   }
 
   calExchange(){
